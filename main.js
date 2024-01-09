@@ -28,7 +28,27 @@ You can choose what the actual content is.
 Try to use both the let and const keywords
 ******************************************************************************/
 
-//your code here
+let petName = "Emma";
+let ownerName = "Erik";
+console.log(petName + " gets walked by " + ownerName);
+
+let names = [ownerName, petName];
+console.log(names);
+
+let creatureA = [petName, 2010, "dog"];
+let creatureB = [ownerName, 1977, "human"];
+
+const ageA = 2023 - creatureA[1];
+console.log(ageA);
+const ageB = 2023 - creatureB[1];
+console.log(ageB);
+
+console.log("------------");
+
+let firstNum = 3;
+let secondNum = 4;
+
+console.log("The initial numbers are " + firstNum + " and " + secondNum);
 
 /****************************************************************************** 
 ASSIGNMENT 3
@@ -37,7 +57,37 @@ Try out a few of the operators we looked at (+, -, /, *)
 as well as a few of the shorthand operators (++, --, +=, -=)
 ******************************************************************************/
 
-//your code here
+let numSum = firstNum + secondNum;
+let numDiff = firstNum - secondNum;
+console.log(numSum + " is the sum of " + firstNum + " and " + secondNum);
+let numProd = firstNum * secondNum;
+console.log(numProd);
+let numFrac = firstNum / secondNum;
+console.log(numFrac);
+
+++firstNum;
+console.log(firstNum + " has been incrememnted by one");
+
+firstNum = --firstNum;
+console.log(firstNum + " has been decreased by one");
+
+firstNum += numProd;
+console.log(firstNum + " has been increased by " + numProd);
+
+firstNum -= numFrac;
+console.log(firstNum + " has been drecreased by " + numFrac);
+
+secondNum += firstNum;
+console.log(secondNum + " has been increased by " + firstNum);
+
+let checkNums = firstNum > 3.5;
+console.log(checkNums);
+
+if (firstNum > 3.5) {
+  console.log(firstNum + " is greater than 3.5");
+} else {
+  console.log(firstNum + " is smaller than 3.5");
+}
 
 /****************************************************************************** 
 ASSIGNMENT 4
@@ -57,11 +107,40 @@ Try changing the values of the variables to make sure your IF/ELSE conditional
 can handle all cases correctly 
 ******************************************************************************/
 
-let userName = "";
-let userAge = 18;
+console.log("---------");
+
+let userName = "Erik";
+let userAge = 46;
 let userIsLoggedIn = false;
 let userIsBlocked = false;
-let goToPage = "";
+let goToPage = "www.snus.com";
+
+let NotOldEnough = userAge <= 18;
+
+if (userName == "") {
+  console.log("Please fill in your username");
+}
+
+if (NotOldEnough) {
+  console.log("You are not old enough!");
+}
+
+if (userIsBlocked) {
+  console.log("You are blocked!");
+}
+
+if (userName == "" || NotOldEnough || userIsBlocked) {
+  userIsLoggedIn = false;
+} else {
+  userIsLoggedIn = true;
+}
+
+if (userIsLoggedIn) {
+  console.log("Please come in!");
+} else {
+  console.log("You can not pass!");
+  goToPage;
+}
 
 //your code here
 
@@ -77,7 +156,25 @@ const variable = statement ? "this if true" : "this if not true"
 Try changing userMale to both true and false and console.log your new variable,
 to see that your conditional is working.
 ******************************************************************************/
+console.log("----------");
 
-const userMale = false;
+const userMale = true;
+let userTitle = userMale ? "Mr." : "Mrs.";
+console.log(userTitle);
+
+const userGender = "non-binary";
+switch (userGender) {
+  case "male":
+    userTitle = "Mr.";
+    break;
+  case "female":
+    userTitle = "Mrs.";
+    break;
+  case "non-binary":
+    userTitle = "Other";
+    break;
+}
+
+console.log(userTitle);
 
 //your code here
