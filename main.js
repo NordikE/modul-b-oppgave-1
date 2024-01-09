@@ -139,7 +139,6 @@ if (userIsLoggedIn) {
   console.log("Please come in!");
 } else {
   console.log("You can not pass!");
-  goToPage;
 }
 
 //your code here
