@@ -50,6 +50,8 @@ let secondNum = 4;
 
 console.log("The initial numbers are " + firstNum + " and " + secondNum);
 
+let older = ageB > ageA;
+
 /****************************************************************************** 
 ASSIGNMENT 3
 
@@ -68,7 +70,7 @@ console.log(numFrac);
 ++firstNum;
 console.log(firstNum + " has been incrememnted by one");
 
-firstNum = --firstNum;
+--firstNum;
 console.log(firstNum + " has been decreased by one");
 
 firstNum += numProd;
