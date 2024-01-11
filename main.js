@@ -115,7 +115,7 @@ let userName = "Erik";
 let userAge = 46;
 let userIsLoggedIn = false;
 let userIsBlocked = false;
-let goToPage = "www.snus.com";
+let goToPage = "";
 
 let NotOldEnough = userAge <= 18;
 
@@ -138,7 +138,7 @@ if (userName == "" || NotOldEnough || userIsBlocked) {
 }
 
 if (userIsLoggedIn) {
-  console.log("Please come in!");
+  console.log("Please come in!", (goToPage = "www.snus.com"));
 } else {
   console.log("You can not pass!");
 }
